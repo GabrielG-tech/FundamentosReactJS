@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Listando com JavaScript</title>
+    </head>
+    <body>
+        <div id="app">
+            <p id="p1" style="color:rgb(255, 154, 2)">Aprendendo</p>
+            <p id="p2" style="color:blue">React</p>
+            <button onclick="mudarConteudo()">Mudar Conteúdo</button>
+            <button onclick="voltarConteudo()">Voltar Conteúdo</button>
+        </div>
+        <script>
+            function mudarConteudo() {
+                const p1 = document.querySelector("#p1")
+                p1.innerHTML = "<h1 style='color:blue'>Aprendendo!!!</h1>"
+
+                const p2 = document.querySelector("#p2")
+                p2.innerHTML = "<h1 style='color:rgb(255, 154, 2)'>React!!</h1>"
+            }
+
+            function voltarConteudo() {
+                const app = document.querySelector("#app")
+                app.innerHTML = `<p id="p1" style="color:rgb(255, 154, 2)">Aprendendo</p>
+            <p id="p2" style="color:blue">React</p>
+            <button onclick="mudarConteudo()">Mudar Conteúdo</button>
+            <button onclick="voltarConteudo()">Voltar Conteúdo</button>`
+            }
+        </script>
+    </body>
+</html>
